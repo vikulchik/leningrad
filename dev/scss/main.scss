@@ -1,0 +1,12 @@
+@import "mixins";
+@import 'compass';
+@import "normalize";
+
+$icons-spacing: 30px;
+$icons-layout: smart;
+//@import "icons/*.png";
+
+
+@import "header";
+
+@import "footer";
