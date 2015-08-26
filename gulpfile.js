@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     autoprefixer = require('gulp-autoprefixer'),
     jade = require('gulp-jade'),
-    minifyCss = require('gulp-minify-css');
+    minifyCss = require('gulp-minify-css'),
+    rename = require("gulp-rename");
 
 
 
@@ -50,9 +51,17 @@ gulp.task('minify-css', function() {
 });
 
 
+/* -------- concat JS -------- */
+gulp.task('concat', function() {
+    return gulp.src('dev/js/modules/*.js')
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('dev/js'));
+});
+
+
 /* -------- minification JS -------- */
 gulp.task('compress', function() {
-    return gulp.src('dev/js/*.js')
+    return gulp.src('dev/js/app.js')
         .pipe(uglify())
         .pipe(gulp.dest('prod/js'));
 });
@@ -64,7 +73,8 @@ gulp.task('watch', function () {
     gulp.watch('dev/scss/*.scss', ['compass']);
     gulp.watch('dev/css/*.css', ['autpr']);
     gulp.watch('dev/css/*.css', ['minify-css']);
-    gulp.watch('dev/js/*.js', ['compress']);
+    gulp.watch('dev/js/modules/*.js', ['concat']);
+    gulp.watch('dev/js/app.js', ['compress']);
 
 });
 
