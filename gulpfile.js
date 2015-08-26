@@ -12,15 +12,13 @@ var gulp = require('gulp'),
     rename = require("gulp-rename");
 
 
-
-
 /* ----- jade ----- */
 gulp.task('jade', function () {
     gulp.src(['dev/jade/[^_]*.jade'])
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('dev/'))
+        .pipe(gulp.dest('prod/'))
 });
 
 /* ------ sass ------ */
@@ -44,15 +42,16 @@ gulp.task('autpr', function () {
 
 
 /* -------- minification CSS -------- */
-gulp.task('minify-css', function() {
-    return gulp.src('dev/css/*.css')
+gulp.task('minify-css', function () {
+    return gulp.src('dev/css/main.css')
         .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(rename("main.min.css"))
         .pipe(gulp.dest('prod/css'));
 });
 
 
 /* -------- concat JS -------- */
-gulp.task('concat', function() {
+gulp.task('concat', function () {
     return gulp.src('dev/js/modules/*.js')
         .pipe(concat('app.js'))
         .pipe(gulp.dest('dev/js'));
@@ -60,14 +59,31 @@ gulp.task('concat', function() {
 
 
 /* -------- minification JS -------- */
-gulp.task('compress', function() {
+gulp.task('compress', function () {
     return gulp.src('dev/js/app.js')
         .pipe(uglify())
+        .pipe(rename("app.min.js"))
         .pipe(gulp.dest('prod/js'));
 });
 
+/* -------- copy img to prodaction -------- */
+gulp.task('copyImg', function () {
+    gulp.src('dev/img/**/*')
+        .pipe(gulp.dest('prod/img'));
+});
 
 
+/* -------- gulp server  -------- */
+gulp.task('webserver', function () {
+    gulp.src('prod')
+        .pipe(webserver({
+            livereload: true,
+            open: true
+        }));
+});
+
+
+/* -------- gulp watching  -------- */
 gulp.task('watch', function () {
     gulp.watch('dev/jade/*.jade', ['jade']);
     gulp.watch('dev/scss/*.scss', ['compass']);
@@ -75,18 +91,8 @@ gulp.task('watch', function () {
     gulp.watch('dev/css/*.css', ['minify-css']);
     gulp.watch('dev/js/modules/*.js', ['concat']);
     gulp.watch('dev/js/app.js', ['compress']);
+    gulp.watch('dev/img/**/*', ['copyImg']);
 
-});
-
-
-
-
-gulp.task('webserver', function () {
-    gulp.src('dev')
-        .pipe(webserver({
-            livereload: true,
-            open: true
-        }));
 });
 
 
@@ -97,4 +103,7 @@ gulp.task('default', [
     'compress',
     'webserver'
 ]);
+
+
+
 
