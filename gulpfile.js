@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
 
 
-//jade
+/* ----- jade ----- */
 gulp.task('jade', function () {
     gulp.src(['dev/jade/[^_]*.jade'])
         .pipe(jade({
@@ -22,6 +22,7 @@ gulp.task('jade', function () {
         .pipe(gulp.dest('dev/'))
 });
 
+/* ------ sass ------ */
 gulp.task('compass', function () {
     gulp.src('dev/scss/*.scss')
         .pipe(compass({
@@ -33,12 +34,15 @@ gulp.task('compass', function () {
         .pipe(gulp.dest('dev/css'));
 });
 
+/* -------- autoprefixer -------- */
 gulp.task('autpr', function () {
     return gulp.src('dev/css/main.css')
         .pipe(autoprefixer(['> 5%', 'last 5 versions', 'IE 9']))
         .pipe(gulp.dest('dev/css'));
 });
 
+
+/* -------- minification CSS -------- */
 gulp.task('minify-css', function() {
     return gulp.src('dev/css/*.css')
         .pipe(minifyCss({compatibility: 'ie8'}))
@@ -46,13 +50,26 @@ gulp.task('minify-css', function() {
 });
 
 
+/* -------- minification JS -------- */
+gulp.task('compress', function() {
+    return gulp.src('dev/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('prod/js'));
+});
+
+
+
 gulp.task('watch', function () {
     gulp.watch('dev/jade/*.jade', ['jade']);
     gulp.watch('dev/scss/*.scss', ['compass']);
     gulp.watch('dev/css/*.css', ['autpr']);
     gulp.watch('dev/css/*.css', ['minify-css']);
+    gulp.watch('dev/js/*.js', ['compress']);
 
 });
+
+
+
 
 gulp.task('webserver', function () {
     gulp.src('dev')
@@ -67,6 +84,7 @@ gulp.task('default', [
     'watch',
     'jade',
     'compass',
+    'compress',
     'webserver'
 ]);
 
