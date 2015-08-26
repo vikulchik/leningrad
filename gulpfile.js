@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     jade = require('gulp-jade'),
     minifyCss = require('gulp-minify-css'),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 
 
 /* ----- jade ----- */
@@ -66,9 +68,15 @@ gulp.task('compress', function () {
         .pipe(gulp.dest('prod/js'));
 });
 
-/* -------- copy img to prodaction -------- */
-gulp.task('copyImg', function () {
-    gulp.src('dev/img/**/*')
+
+/* -------- images minification  -------- */
+gulp.task('imagemin', function () {
+    return gulp.src('dev/img/**/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
         .pipe(gulp.dest('prod/img'));
 });
 
@@ -91,8 +99,7 @@ gulp.task('watch', function () {
     gulp.watch('dev/css/*.css', ['minify-css']);
     gulp.watch('dev/js/modules/*.js', ['concat']);
     gulp.watch('dev/js/app.js', ['compress']);
-    gulp.watch('dev/img/**/*', ['copyImg']);
-
+    gulp.watch('dev/img/**/*', ['imagemin']);
 });
 
 
@@ -100,6 +107,7 @@ gulp.task('default', [
     'watch',
     'jade',
     'compass',
+    'concat',
     'compress',
     'webserver'
 ]);
