@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp'),
-    scss = require('gulp-sass'),
     concat = require('gulp-concat'),
     webserver = require('gulp-webserver'),
     uglify = require('gulp-uglify'),
@@ -11,9 +10,7 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     rename = require("gulp-rename"),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    postcss = require('gulp-postcss');
-
+    pngquant = require('imagemin-pngquant');
 
 /* ----- jade ----- */
 gulp.task('jade', function () {
