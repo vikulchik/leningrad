@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     rename = require("gulp-rename"),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    postcss = require('gulp-postcss');
 
 
 /* ----- jade ----- */
@@ -37,9 +38,9 @@ gulp.task('compass', function () {
 
 /* -------- autoprefixer -------- */
 gulp.task('autpr', function () {
-    return gulp.src('dev/css/main.css')
+    return gulp.src('prod/css/main.min.css')
         .pipe(autoprefixer(['> 5%', 'last 5 versions', 'IE 9']))
-        .pipe(gulp.dest('dev/css'));
+        .pipe(gulp.dest('prod/css'));
 });
 
 
@@ -95,8 +96,8 @@ gulp.task('webserver', function () {
 gulp.task('watch', function () {
     gulp.watch('dev/jade/*.jade', ['jade']);
     gulp.watch('dev/scss/*.scss', ['compass']);
-    gulp.watch('dev/css/*.css', ['autpr']);
     gulp.watch('dev/css/*.css', ['minify-css']);
+    gulp.watch('prod/css/*.css', ['autpr']);
     gulp.watch('dev/js/modules/*.js', ['concat']);
     gulp.watch('dev/js/app.js', ['compress']);
     gulp.watch('dev/img/**/*', ['imagemin']);
