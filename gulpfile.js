@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     rename = require("gulp-rename"),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    spritesmith = require('gulp.spritesmith');
 
 /* ----- jade ----- */
 gulp.task('jade', function () {
@@ -64,6 +65,18 @@ gulp.task('compress', function () {
         .pipe(uglify())
         .pipe(rename("app.min.js"))
         .pipe(gulp.dest('prod/js'));
+});
+
+
+/* -------- auto sprites  -------- */
+gulp.task('sprite', function () {
+    var spriteData = gulp.src('dev/img/icons/*.png').pipe(spritesmith({
+        imgName: 'sprite.png',
+        imgPath: '../img/sprite.png',
+        cssName: 'sprite.scss'
+    }));
+    spriteData.img.pipe(gulp.dest('dev/img/'));
+    spriteData.css.pipe(gulp.dest('dev/scss/'));
 });
 
 
