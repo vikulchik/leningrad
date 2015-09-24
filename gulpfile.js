@@ -19,7 +19,7 @@ gulp.task('jade', function () {
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('prod/'))
+        .pipe(gulp.dest('dev/'))
 });
 
 /* ------ sass ------ */
@@ -94,7 +94,7 @@ gulp.task('imagemin', function () {
 
 /* -------- gulp server  -------- */
 gulp.task('webserver', function () {
-    gulp.src('prod')
+    gulp.src('dev')
         .pipe(webserver({
             livereload: true,
             open: true
