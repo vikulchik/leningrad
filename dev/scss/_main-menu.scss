@@ -1,8 +1,8 @@
 .main-menu {
   margin: auto;
-  width: 1152px;
+  width: 1200px;
   position: relative;
-  &:after {
+  /*&:after {
     content: '';
     display: block;
     width: 92px;
@@ -21,7 +21,7 @@
     top: 0;
     right: -96px;
     background:url("../img/after.png") no-repeat;
-  }
+  }*/
   &_img {
     position: relative;
     display: inline-block;
@@ -35,44 +35,44 @@
     font-weight: normal;
     font-size: 28px;
   }
+  &_item {
+    width: 222px;
+    min-height: 237px;
+    margin-left: 16px;
+    vertical-align: top;
+    display: inline-block;
+    &.img-1 {
+      background: url("../img/cook-1.png") no-repeat 0 0;
+    }
+    &.img-2 {
+      background: url("../img/cook-2.png") no-repeat 0 0;
+    }
+    &.img-3 {
+      background: url("../img/cook-3.png") no-repeat 0 0;
+    }
+    &.img-4 {
+      background: url("../img/cook-4.png") no-repeat 0 0;
+    }
+  }
   &_list {
     width: 1152px;
     margin: auto;
     text-align: center;
     padding: 0;
     position: absolute;
-    top: 126px;
-    left: 21px;
-  }
-  &_item {
-    font-size: 23px;
-    text-transform: uppercase;
-    font-weight: normal;
-    display: inline-block;
-    list-style-type: none;
-    background-color: #984abc;
-    width: 223px;
-    height: 99px;
-    margin-left: 16px;
-    &:first-child {
-      margin-left: 0;
-    }
+    top: 226px;
+    left: 15px;
   }
   &_link {
-    text-decoration: none;
-    color: #ffffff;
-    text-align: center;
     display: block;
-  }
-  &_cook {
-    width: 1152px;
-    margin: 61px 0 20px 120px;
-  }
-  &_eat {
-    margin-left: 20px;
-    display: inline-block;
-    &:first-child {
-      margin-left: 0;
-    }
+    background: #984abc;
+    min-height: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: normal;
+    width: 222px;
+    height: 100px;
+    margin-top: -100px;
   }
 }

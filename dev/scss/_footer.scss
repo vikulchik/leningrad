@@ -1,7 +1,8 @@
 .footer {
-  width: 1152px;
+  width: 1200px;
   margin: auto;
   position: relative;
+  min-height: 300px;
   &_img {
     position: relative;
     margin-top: 39px;
@@ -17,12 +18,104 @@
     left: 563px;
   }
   &_contact {
-    width: 941px;
-    min-height: 301px;
-    //margin: auto;
+    width: 886px;
+    min-height: 285px;
     background-color: #984abc;
     position: absolute;
     top: 117px;
-    left: 126px;
+    left: 131px;
+    padding: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  &_section, &_info {
+    float: left;
+  }
+  &_section {
+    margin-right: 75px;
+  }
+  &_info {
+    margin-right: 59px;
+    width: 245px;
+  }
+  &_nav {
+    float: right;
+  }
+  &_adress {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+  }
+  &_article, &_phone {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin:0;
+  }
+  &_phone {
+    text-decoration: none;
+  }
+  &_email {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+  }
+  &_tel {
+    color: #000000;
+    font-size: 18px;
+    margin: 0;
+  }
+  &_numder {
+    font-size: 22px;
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.5;
+  }
+  &__link {
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+  &__list {
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+  }
+  &_text {
+    background-color: #ffffff;
+    color: #984abc;
+    font-size: 15px;
+    display: inline-block;
+    padding: 8px 13px;
+    width: 195px;
+    position: relative;
+    height: 18px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .triangle-right {
+      border: 17px solid transparent;
+      border-left: 20px solid #ffffff;
+      position: absolute;
+      top:0;
+      right: -37px;
+    }
+  &_maps {
+    display: block;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 81px;
+      height: 82px;
+      top: 20px;
+      left: 70px;
+      background: url("../img/search.png") no-repeat 0 0;
+    }
   }
 }

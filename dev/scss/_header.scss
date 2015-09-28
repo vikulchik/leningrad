@@ -14,8 +14,8 @@
     &-logo {
         display: inline-block;
         position: absolute;
-        top: 5%;
-        left: 31%;
+        top: 4%;
+        left: 32%;
     }
     &-player {
         position: relative;
@@ -30,7 +30,7 @@
             background: #984abc;
             position: absolute;
             top: 0;
-            left: 46px;
+            left: 73px;
         }
         &:before {
             content: '';
@@ -38,6 +38,7 @@
             border: 8px solid transparent;
             border-left: 18px solid #984abc;
             position: absolute;
+            left: 18px;
         }
         .square {
                 width: 5px;
@@ -45,12 +46,12 @@
                 background: #984abc;
                 position: absolute;
                 top: -24px;
-                left: 24px;
+                left: 48px;
         }
         .square-second {
             position: absolute;
             top: -24px;
-            left: 33px;
+            left: 58px;
             width: 5px;
             height: 15px;
             background: #984abc;
@@ -67,6 +68,7 @@
         height: 29px;
         padding: 10px 5px;
         box-sizing: border-box;
+        margin-left: 18px;
     }
     &-language {
         color: #eb98b9;
@@ -74,7 +76,7 @@
         text-decoration: none;
         position: absolute;
         top: 29px;
-        left: 267px;
+        left: 288px;
     }
     &-contact {
        position: absolute;

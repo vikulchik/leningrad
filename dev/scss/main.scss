@@ -13,9 +13,11 @@
 
 @import "footer";
 
-.app {
-  max-width: 1920px;
-}
+/*.app {
+  background-color: #cccccc;
+}*/
 .wrapper {
   background-color: #cccccc;
+  max-width: 1200px;
+  margin: auto;
 }

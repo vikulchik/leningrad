@@ -1,0 +1,31 @@
+.tabs_content {
+  background-color: #984abc;
+  width: 938px;
+  height: 112px;
+  margin: auto;
+  font-size: 20px;
+}
+.tabs_item {
+  list-style-type: none;
+}
+.tabs_link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.tabs_list-item {
+    width: 20px;
+    height: 44px;
+    list-style-type: none;
+  }
+.tabs_list-link {
+    display: block;
+    color: #f8f3fb;
+  }
+.tabs-list__date {
+  display: block;
+  background-color: #ffffff;
+  color: #cc3399;
+}
+.tabs_list-second {
+  display: flex;
+}
