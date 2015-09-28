@@ -1,0 +1,13 @@
+.main-section {
+  margin: auto;
+  width: 1150px;
+  text-align: center;
+  &_img {
+    display: inline-block;
+    margin-left: 24px;
+    margin-bottom: 28px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.main_slider {
+  position: relative;
+  text-align: center;
+  &_h2 {
+    color: #61656e;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    left: 563px;
+  }
+  &_post {
+    position: relative;
+    display: inline-block;
+  }
+  &_slider {
+    margin-top: -46px;
+    position: relative;
+    display: inline-block;
+  }
+  &-list {
+    padding: 0;
+  }
+  &-item {
+    display: inline-block;
+    margin-left: 40px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    &:hover {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+  &-text {
+    width: 1152px;
+    margin: auto;
+    background-color: #e6e6e6;
+    padding: 5px 11px;
+    text-align: left;
+    min-height: 285px;
+  }
+  &-article {
+    font-size: 15px;
+  }
+}
+.main_prew {
+  background: url("../img/arrow.png") no-repeat 0 0;
+  display: block;
+  font-size: 0;
+  width: 51px;
+  height: 50px;
+  position: absolute;
+  top: 310px;
+  left: 201px;
+}
+.main_next {
+  background: url("../img/arrow-2.png") no-repeat 0 0;
+  display: block;
+  font-size: 0;
+  width: 51px;
+  height: 50px;
+  position: absolute;
+  top: 310px;
+  right: 199px;
+}

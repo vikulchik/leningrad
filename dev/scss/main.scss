@@ -1,10 +1,21 @@
 @import "mixins";
 @import 'compass';
 @import "normalize";
-//@import "sprite";
 
 
 
 @import "header";
+@import "navigation";
+@import "tabs";
+@import "main-section";
+@import "main-menu";
+@import "slider";
 
 @import "footer";
+
+.app {
+  max-width: 1920px;
+}
+.wrapper {
+  background-color: #cccccc;
+}

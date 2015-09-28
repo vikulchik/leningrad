@@ -1,3 +1,28 @@
 .footer {
-
+  width: 1152px;
+  margin: auto;
+  position: relative;
+  &_img {
+    position: relative;
+    margin-top: 39px;
+    display: block;
+  }
+  &_title {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 28px;
+    position: absolute;
+    top: 0;
+    left: 563px;
+  }
+  &_contact {
+    width: 941px;
+    min-height: 301px;
+    //margin: auto;
+    background-color: #984abc;
+    position: absolute;
+    top: 117px;
+    left: 126px;
+  }
 }

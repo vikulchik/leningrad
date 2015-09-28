@@ -1,0 +1,78 @@
+.main-menu {
+  margin: auto;
+  width: 1152px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 92px;
+    height: 157px;
+    position: absolute;
+    top: 0;
+    left: -92px;
+    background:url("../img/after.png") no-repeat;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 92px;
+    height: 157px;
+    position: absolute;
+    top: 0;
+    right: -96px;
+    background:url("../img/after.png") no-repeat;
+  }
+  &_img {
+    position: relative;
+    display: inline-block;
+  }
+  &_title {
+    position: absolute;
+    top: 10px;
+    left: 553px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 28px;
+  }
+  &_list {
+    width: 1152px;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 126px;
+    left: 21px;
+  }
+  &_item {
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: normal;
+    display: inline-block;
+    list-style-type: none;
+    background-color: #984abc;
+    width: 223px;
+    height: 99px;
+    margin-left: 16px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &_link {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+  }
+  &_cook {
+    width: 1152px;
+    margin: 61px 0 20px 120px;
+  }
+  &_eat {
+    margin-left: 20px;
+    display: inline-block;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

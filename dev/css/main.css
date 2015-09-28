@@ -1,69 +1,941 @@
-/*
-Error: File to import not found or unreadable: sprite.
-       Load paths:
-         /Volumes/Data/Projects/template/dev/scss
-         /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets
-         Compass::SpriteImporter
-        on line 4 of /Volumes/Data/Projects/template/dev/scss/main.scss
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 
-1: @import "mixins";
-2: @import 'compass';
-3: @import "normalize";
-4: @import "sprite";
-5: 
-6: 
-7: 
-8: @import "header";
-9: 
+.hide {
+  display: none !important;
+}
 
-Backtrace:
-/Volumes/Data/Projects/template/dev/scss/main.scss:4
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:23:in `block in render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:22:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `call'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/bin/compass:23:in `load'
-/usr/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: sprite.\A        Load paths:\A          /Volumes/Data/Projects/template/dev/scss\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 4 of /Volumes/Data/Projects/template/dev/scss/main.scss\A \A 1: @import \"mixins\";\A 2: @import 'compass';\A 3: @import \"normalize\";\A 4: @import \"sprite\";\A 5: \A 6: \A 7: \A 8: @import \"header\";\A 9: "; }
+/* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
+/**
+ * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
+ * body `font-size` is set using `em` units.
+ */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+blockquote {
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  line-height: 1.5em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin-top: 1.28205em;
+  margin-bottom: 1.28205em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin-top: 1.80723em;
+  margin-bottom: 1.80723em;
+}
+
+h6 {
+  font-size: 0.67em;
+  line-height: 2.23881em;
+  margin-top: 2.23881em;
+  margin-bottom: 2.23881em;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+p,
+pre {
+  margin: 1.5em 0;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.5em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Address `font-family` inconsistency between `textarea` and other form in IE 7
+ * 5. Improve appearance and consistency with IE 6/7.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  *font-family: sans-serif;
+  /* 4 */
+  *vertical-align: middle;
+  /* 5 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+  /**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-color: #c0c0c0;
+  border-top-width: 0.0625em;
+  border-top-style: solid;
+  padding-top: 0.4625em;
+  border-bottom-width: 0.0625em;
+  border-bottom-style: solid;
+  padding-bottom: 0.9125em;
+  border-left-width: 0.0625em;
+  border-left-style: solid;
+  padding-left: 0.875em;
+  border-right-width: 0.0625em;
+  border-right-style: solid;
+  padding-right: 0.875em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.header {
+  min-height: 133px;
+  background-color: #e5e5e5;
+}
+.header-main-content {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 33px 10px;
+}
+.header-find {
+  float: left;
+  display: inline-block;
+  margin-left: 66px;
+}
+.header-logo {
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+  left: 31%;
+}
+.header-player {
+  position: relative;
+  width: 62px;
+  height: 15px;
+  margin-bottom: 19px;
+}
+.header-player:after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #984abc;
+  position: absolute;
+  top: 0;
+  left: 46px;
+}
+.header-player:before {
+  content: '';
+  display: block;
+  border: 8px solid transparent;
+  border-left: 18px solid #984abc;
+  position: absolute;
+}
+.header-player .square {
+  width: 5px;
+  height: 15px;
+  background: #984abc;
+  position: absolute;
+  top: -24px;
+  left: 24px;
+}
+.header-player .square-second {
+  position: absolute;
+  top: -24px;
+  left: 33px;
+  width: 5px;
+  height: 15px;
+  background: #984abc;
+}
+.header-input {
+  border: 1px solid #b7b7b7;
+  border-radius: 10px;
+  color: #898989;
+  font-size: 15px;
+  background-color: #e5e5e5;
+  width: 180px;
+  height: 29px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+}
+.header-language {
+  color: #eb98b9;
+  font-size: 15px;
+  text-decoration: none;
+  position: absolute;
+  top: 29px;
+  left: 267px;
+}
+.header-contact {
+  position: absolute;
+  top: 98px;
+  right: 193px;
+}
+.header-title {
+  margin-right: 140px;
+  background-color: #984abc;
+  color: #ffffff;
+  font-size: 15px;
+  display: inline-block;
+  padding: 8px 13px;
+  width: 205px;
+  position: relative;
+  text-decoration: none;
+  height: 18px;
+  float: right;
+  text-align: center;
+}
+.header-title .triangle-right {
+  border: 17px solid transparent;
+  border-left: 20px solid #984abc;
+  position: absolute;
+  top: 0;
+  right: -37px;
+}
+.header-action {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 12px;
+  display: inline-block;
+  position: absolute;
+  top: 62px;
+  right: 241px;
+}
+.header-phone {
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+.header-phone span {
+  font-size: 15px;
+}
+
+.nav__navigation {
+  text-align: center;
+  /* .active {
+       background-color: #ffffff;
+       position: relative;
+     &:after {
+       content: '';
+       display: block;
+       border: 12px solid transparent;
+       border-top: 10px solid #ffffff;
+       position: absolute;
+       top: 52px;
+       left: 53px;
+     }
+   }*/
+}
+.nav__navigation .nav__main {
+  margin: auto;
+  width: 1150px;
+}
+.nav__navigation .nav__list {
+  padding: 0;
+}
+.nav__navigation .nav__item {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 20px;
+}
+.nav__navigation .nav__item:first-child {
+  margin-left: 0;
+}
+.nav__navigation .nav__link {
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 18px;
+  display: block;
+  padding: 14px 14px;
+  transition: 0.5s;
+}
+.nav__navigation .nav__link:hover {
+  background-color: #ffffff;
+  /*width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid red;*/
+}
+.nav__navigation .nav__list {
+  display: inline-block;
+  margin: 0;
+}
+
+.main-img {
+  margin-bottom: 24px;
+}
+
+.main-section {
+  margin: auto;
+  width: 1150px;
+  text-align: center;
+}
+.main-section_img {
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: 28px;
+}
+.main-section_img:first-child {
+  margin-left: 0;
+}
+
+.main-menu {
+  margin: auto;
+  width: 1152px;
+  position: relative;
+}
+.main-menu:after {
+  content: '';
+  display: block;
+  width: 92px;
+  height: 157px;
+  position: absolute;
+  top: 0;
+  left: -92px;
+  background: url("../img/after.png") no-repeat;
+}
+.main-menu:before {
+  content: '';
+  display: block;
+  width: 92px;
+  height: 157px;
+  position: absolute;
+  top: 0;
+  right: -96px;
+  background: url("../img/after.png") no-repeat;
+}
+.main-menu_img {
+  position: relative;
+  display: inline-block;
+}
+.main-menu_title {
+  position: absolute;
+  top: 10px;
+  left: 553px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+}
+.main-menu_list {
+  width: 1152px;
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  top: 126px;
+  left: 21px;
+}
+.main-menu_item {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: normal;
+  display: inline-block;
+  list-style-type: none;
+  background-color: #984abc;
+  width: 223px;
+  height: 99px;
+  margin-left: 16px;
+}
+.main-menu_item:first-child {
+  margin-left: 0;
+}
+.main-menu_link {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+}
+.main-menu_cook {
+  width: 1152px;
+  margin: 61px 0 20px 120px;
+}
+.main-menu_eat {
+  margin-left: 20px;
+  display: inline-block;
+}
+.main-menu_eat:first-child {
+  margin-left: 0;
+}
+
+.main_slider {
+  position: relative;
+  text-align: center;
+}
+.main_slider_h2 {
+  color: #61656e;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  left: 563px;
+}
+.main_slider_post {
+  position: relative;
+  display: inline-block;
+}
+.main_slider_slider {
+  margin-top: -46px;
+  position: relative;
+  display: inline-block;
+}
+.main_slider-list {
+  padding: 0;
+}
+.main_slider-item {
+  display: inline-block;
+  margin-left: 40px;
+}
+.main_slider-item:first-child {
+  margin-left: 0;
+}
+.main_slider-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+}
+.main_slider-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.main_slider-text {
+  width: 1152px;
+  margin: auto;
+  background-color: #e6e6e6;
+  padding: 5px 11px;
+  text-align: left;
+  min-height: 285px;
+}
+.main_slider-article {
+  font-size: 15px;
+}
+
+.main_prew {
+  background: url("../img/arrow.png") no-repeat 0 0;
+  display: block;
+  font-size: 0;
+  width: 51px;
+  height: 50px;
+  position: absolute;
+  top: 310px;
+  left: 201px;
+}
+
+.main_next {
+  background: url("../img/arrow-2.png") no-repeat 0 0;
+  display: block;
+  font-size: 0;
+  width: 51px;
+  height: 50px;
+  position: absolute;
+  top: 310px;
+  right: 199px;
+}
+
+.footer {
+  width: 1152px;
+  margin: auto;
+  position: relative;
+}
+.footer_img {
+  position: relative;
+  margin-top: 39px;
+  display: block;
+}
+.footer_title {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  position: absolute;
+  top: 0;
+  left: 563px;
+}
+.footer_contact {
+  width: 941px;
+  min-height: 301px;
+  background-color: #984abc;
+  position: absolute;
+  top: 117px;
+  left: 126px;
+}
+
+.app {
+  max-width: 1920px;
+}
+
+.wrapper {
+  background-color: #cccccc;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,12 @@
+section.tabs_content
+    ul.tabs_list-first
+        li.tabs_item.active
+            a(href="#").tabs_link.active Апрель
+        li.tabs_item
+            a(href="#").tabs_link Май
+    ul.tabs_list-second
+        - for (var x = 0; x < 4; x++)
+            each val, index in ['Чт', 'Пт', 'Сб', 'Вс', 'Пн', 'Вт', 'Ср']
+                li.tabs_list-item
+                    span.tabs_list-link=val
+                    span.tabs-list__date=index+1

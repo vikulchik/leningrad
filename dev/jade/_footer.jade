@@ -1,1 +1,19 @@
 footer.footer
+    img(src="img/contact.jpg" alt="").footer_img
+    h2.footer_title Контакты
+    article.footer_contact
+        p.footer_adress.
+            Адрес: Ленинградский проспект 24 а (ст.м.<br> Белорусская) Заезд с улицы Правды д.3,<br> сразу за Спортивным Комплексом " Крылья<br> Советов"!!!
+        p.footer_article Телефон для поставщиков:
+        a(href="tel:8(963)7573763").footer_phone 8(963)757-37-63
+        p.footer_article с 10:00 до 18:00
+        a(href="mailto:6136201@mail.ru").footer_email e-mail 6136201@mail.ru
+        p.footer_tel многоканальныe телефоны:
+        a(href="tel:8(495)6136201").footer_numder 8 (495) 613-62-01
+        a(href="tel:8(495)6376800").footer_numder 8 (495) 637-68-00
+        p.footer_text Забронировать стол
+        nav.footer__nav
+            ul.footer__list
+                each item in ['Банкеты', 'Корпоративы', 'Свадьбы', 'Фуршеты', 'Праздники']
+                    li.footer__item
+                        a(href="#").footer__link=item

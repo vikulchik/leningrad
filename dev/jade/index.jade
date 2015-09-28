@@ -2,8 +2,15 @@ doctype
 html
     include _head.jade
     body
-        .wrapper
-            include _header.jade
+        .app
+            .wrapper
+                include _header.jade
+                include _navigation.jade
+                include _tabs.jade
+                include _main-section.jade
+                include _main-menu.jade
+                include _sliger.jade
 
-            include _footer.jade
-        include _scripts.jade
+                include _footer.jade
+            include _scripts.jade
+

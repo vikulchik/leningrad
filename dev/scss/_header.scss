@@ -1,11 +1,126 @@
-a {
-    font-family: Arial;
-    font-style: italic;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
-    background-image: url('example.png');
-    background-color: red;
-    background-size: cover;
-    background-repeat: no-repeat;
+.header {
+    min-height: 133px;
+    background-color: #e5e5e5;
+    &-main-content {
+        width: 1150px;
+        margin: 0 auto;
+        padding: 33px 10px;
+    }
+    &-find {
+        float: left;
+        display: inline-block;
+        margin-left: 66px;
+    }
+    &-logo {
+        display: inline-block;
+        position: absolute;
+        top: 5%;
+        left: 31%;
+    }
+    &-player {
+        position: relative;
+        width: 62px;
+        height: 15px;
+        margin-bottom: 19px;
+        &:after {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: #984abc;
+            position: absolute;
+            top: 0;
+            left: 46px;
+        }
+        &:before {
+            content: '';
+            display: block;
+            border: 8px solid transparent;
+            border-left: 18px solid #984abc;
+            position: absolute;
+        }
+        .square {
+                width: 5px;
+                height: 15px;
+                background: #984abc;
+                position: absolute;
+                top: -24px;
+                left: 24px;
+        }
+        .square-second {
+            position: absolute;
+            top: -24px;
+            left: 33px;
+            width: 5px;
+            height: 15px;
+            background: #984abc;
+        }
+
+    }
+    &-input {
+        border: 1px solid #b7b7b7;
+        border-radius: 10px;
+        color: #898989;
+        font-size: 15px;
+        background-color: #e5e5e5;
+        width: 180px;
+        height: 29px;
+        padding: 10px 5px;
+        box-sizing: border-box;
+    }
+    &-language {
+        color: #eb98b9;
+        font-size: 15px;
+        text-decoration: none;
+        position: absolute;
+        top: 29px;
+        left: 267px;
+    }
+    &-contact {
+       position: absolute;
+        top: 98px;
+        right: 193px;
+    }
+    &-title {
+        margin-right: 140px;
+        background-color: #984abc;
+        color: #ffffff;
+        font-size: 15px;
+        display:inline-block;
+        padding: 8px 13px;
+        width: 205px;
+        position: relative;
+        text-decoration: none;
+        height: 18px;
+        float: right;
+        text-align: center;
+        .triangle-right {
+            border: 17px solid transparent;
+            border-left: 20px solid #984abc;
+            position: absolute;
+            top: 0;
+            right: -37px;
+        }
+    }
+    &-action {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-top: 12px;
+        display: inline-block;
+        position: absolute;
+        top: 62px;
+        right: 241px;
+    }
+    &-phone {
+        font-size: 20px;
+        color: #000000;
+        text-decoration: none;
+        span {
+            font-size: 15px;
+        }
+    }
 }
+
+
+
+

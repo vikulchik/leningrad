@@ -9,8 +9,6 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     minifyCss = require('gulp-minify-css'),
     rename = require("gulp-rename"),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
     spritesmith = require('gulp.spritesmith');
 
 /* ----- jade ----- */
@@ -80,17 +78,6 @@ gulp.task('sprite', function () {
 });
 
 
-/* -------- images minification  -------- */
-gulp.task('imagemin', function () {
-    return gulp.src('dev/img/**/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('prod/img'));
-});
-
 
 /* -------- gulp server  -------- */
 gulp.task('webserver', function () {
@@ -110,7 +97,6 @@ gulp.task('watch', function () {
     gulp.watch('prod/css/*.css', ['autpr']);
     gulp.watch('dev/js/modules/*.js', ['concat']);
     gulp.watch('dev/js/app.js', ['compress']);
-    gulp.watch('dev/img/**/*', ['imagemin']);
 });
 
 
