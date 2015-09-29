@@ -6,5 +6,5 @@ $('.bxslider').bxSlider({
     auto: true,
     autoControls: true,
     pause: 3000,
-    slideMargin: 20
+    slideMargin: 10
 });
