@@ -625,6 +625,7 @@ th {
   padding: 10px 5px;
   box-sizing: border-box;
   margin-left: 18px;
+  text-transform: capitalize;
 }
 .header-language {
   color: #eb98b9;
@@ -920,7 +921,7 @@ th {
   height: 50px;
   position: absolute;
   top: 310px;
-  left: 201px;
+  left: 128px;
 }
 
 .main_next {
@@ -931,7 +932,7 @@ th {
   height: 50px;
   position: absolute;
   top: 310px;
-  right: 199px;
+  right: 128px;
 }
 
 .footer {

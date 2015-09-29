@@ -5,8 +5,12 @@ section.tabs_content
         li.tabs_item
             a(href="#").tabs_link Май
     ul.tabs_list-second
+
+        - var count = 1
         - for (var x = 0; x < 4; x++)
-            each val, index in ['Чт', 'Пт', 'Сб', 'Вс', 'Пн', 'Вт', 'Ср']
+
+            each val in ['Чт', 'Пт', 'Сб', 'Вс', 'Пн', 'Вт', 'Ср']
                 li.tabs_list-item
                     span.tabs_list-link=val
-                    span.tabs-list__date=index+1
+                    span.tabs-list__date=count++
+
