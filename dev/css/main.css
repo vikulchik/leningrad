@@ -928,6 +928,9 @@ th {
 .main_slider-item:first-child {
   margin-left: 0;
 }
+.main_slider .bxslider-li {
+  list-style-type: none;
+}
 .main_slider-link {
   text-transform: uppercase;
   text-decoration: none;
