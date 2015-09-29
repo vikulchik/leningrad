@@ -1,31 +1,67 @@
 .tabs_content {
-  background-color: #984abc;
   width: 938px;
   height: 112px;
   margin: auto;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: normal;
 }
 .tabs_item {
   list-style-type: none;
+  background-color: #984abc;
+  display: block;
+  width: 40px;
+  height: 20px;
+  padding: 3px 70px 3px 18px;
+  &.active {
+    background-color: #ffffff;
+    display: block;
+    width: 40px;
+    height: 20px;
+    padding: 3px 44px;
+    margin: -27px 0 0 88px;
+  }
 }
 .tabs_link {
   color: #ffffff;
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  &.active {
+    color:  #cc3399;
+  }
 }
 .tabs_list-item {
-    width: 20px;
-    height: 44px;
-    list-style-type: none;
+  width: 20px;
+  height: 44px;
+  list-style-type: none;
+  margin-left: 13px;
+  &:first-child {
+    margin-left: 0;
   }
+}
 .tabs_list-link {
     display: block;
     color: #f8f3fb;
+    margin-left: 16px;
   }
 .tabs-list__date {
   display: block;
   background-color: #ffffff;
   color: #cc3399;
+  width: 20px;
+  height: 20px;
+  padding: 2px 0 6px 9px;
+  margin-left: 8px;
 }
 .tabs_list-second {
   display: flex;
+  width: 938px;
+  height: 68px;
+  background-color: #984abc;
+  padding: 16px 0 9px 0;
+  margin-top: -23px;
+}
+.tabs_item {
+  display: inline-block;
+  margin-left: -40px;
 }
