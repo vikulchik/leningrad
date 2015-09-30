@@ -82,10 +82,11 @@
     min-height: 285px;
   }
   &-article {
-    font-size: 15px;
+    font-size: 18px;
+    font-family: "Vida 21 Pro Regular";
   }
 }
-.main_prew {
+.bx-prev {
   background: url("../img/arrow.png") no-repeat 0 0;
   display: block;
   font-size: 0;
@@ -93,9 +94,9 @@
   height: 50px;
   position: absolute;
   top: 310px;
-  left: 128px;
+  left: 127px;
 }
-.main_next {
+.bx-next {
   background: url("../img/arrow-2.png") no-repeat 0 0;
   display: block;
   font-size: 0;
@@ -103,5 +104,15 @@
   height: 50px;
   position: absolute;
   top: 310px;
-  right: 128px; 
+  right: 127px;
+  text-indent: -9999px;
+}
+.slider_p {
+  color : #fff;
+  font-size: 50px;
+  position: absolute;
+  top: 242px;
+  left: 403px;
+  text-transform: uppercase;
+  font-weight: normal;
 }

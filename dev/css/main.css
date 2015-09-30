@@ -571,8 +571,8 @@ th {
 .header-logo {
   display: inline-block;
   position: absolute;
-  top: 4%;
-  left: 32%;
+  top: 15px;
+  left: 354px;
 }
 .header-player {
   position: relative;
@@ -626,19 +626,21 @@ th {
   box-sizing: border-box;
   margin-left: 18px;
   text-transform: capitalize;
+  font-family: "Vida 21 Pro Regular";
 }
 .header-language {
   color: #eb98b9;
   font-size: 15px;
   text-decoration: none;
   position: absolute;
-  top: 29px;
-  left: 288px;
+  top: 27px;
+  left: 216px;
 }
 .header-contact {
   position: absolute;
   top: 98px;
-  right: 193px;
+  right: 116px;
+  font-family: "Vida 21 Pro Regular";
 }
 .header-title {
   margin-right: 140px;
@@ -653,6 +655,7 @@ th {
   height: 18px;
   float: right;
   text-align: center;
+  font-family: "Vida 21 Pro Regular";
 }
 .header-title .triangle-right {
   border: 17px solid transparent;
@@ -668,7 +671,8 @@ th {
   display: inline-block;
   position: absolute;
   top: 62px;
-  right: 241px;
+  right: 169px;
+  font-family: "Vida 21 Pro Regular";
 }
 .header-phone {
   font-size: 20px;
@@ -706,6 +710,7 @@ th {
   padding: 14px 14px;
   transition: 0.5s;
   position: relative;
+  font-family: "Vida 21 Pro Regular";
 }
 .nav__navigation .nav__link:hover {
   background-color: #ffffff;
@@ -820,26 +825,6 @@ th {
   margin: auto;
   width: 1200px;
   position: relative;
-  /*&:after {
-    content: '';
-    display: block;
-    width: 92px;
-    height: 157px;
-    position: absolute;
-    top: 0;
-    left: -92px;
-    background:url("../img/after.png") no-repeat;
-  }
-  &:before {
-    content: '';
-    display: block;
-    width: 92px;
-    height: 157px;
-    position: absolute;
-    top: 0;
-    right: -96px;
-    background:url("../img/after.png") no-repeat;
-  }*/
 }
 .main-menu_img {
   position: relative;
@@ -980,10 +965,11 @@ th {
   min-height: 285px;
 }
 .main_slider-article {
-  font-size: 15px;
+  font-size: 18px;
+  font-family: "Vida 21 Pro Regular";
 }
 
-.main_prew {
+.bx-prev {
   background: url("../img/arrow.png") no-repeat 0 0;
   display: block;
   font-size: 0;
@@ -991,10 +977,10 @@ th {
   height: 50px;
   position: absolute;
   top: 310px;
-  left: 128px;
+  left: 127px;
 }
 
-.main_next {
+.bx-next {
   background: url("../img/arrow-2.png") no-repeat 0 0;
   display: block;
   font-size: 0;
@@ -1002,14 +988,25 @@ th {
   height: 50px;
   position: absolute;
   top: 310px;
-  right: 128px;
+  right: 127px;
+  text-indent: -9999px;
+}
+
+.slider_p {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  top: 242px;
+  left: 403px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .footer {
   width: 1200px;
   margin: auto;
   position: relative;
-  min-height: 300px;
+  min-height: 462px;
 }
 .footer_img {
   position: relative;
@@ -1135,6 +1132,50 @@ th {
   background-color: #cccccc;
   max-width: 1200px;
   margin: auto;
+  position: relative;
+}
+
+.up-button {
+  text-decoration: none;
+  position: absolute;
+  bottom: 670px;
+  right: 27px;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  width: 71px;
+  height: 39px;
+  background-color: #984abc;
+  text-align: center;
+  padding: 43px  6px 5px;
+  border-radius: 50% 50%;
+}
+.up-button:after {
+  content: '';
+  display: block;
+  border: 15px solid transparent;
+  border-bottom: 18px solid #ffffff;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+}
+
+@font-face {
+  font-family: "vida_21_proitalic";
+  src: url(../../font/vida21pro-italic.svg);
+}
+@font-face {
+  font-family: "Vida 21 Pro Regular";
+  src: url(../../font/vida21pro.svg);
+}
+@font-face {
+  font-family: "Vida 22 Pro Bold";
+  src: url(../../font/vida22pro-bold.svg);
+}
+@font-face {
+  font-family: "Vida 22 Pro Bold Italic";
+  src: url(../../font/vida22pro-bolditalic.svg);
 }
 
 /*# sourceMappingURL=main.css.map */

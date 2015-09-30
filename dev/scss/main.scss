@@ -20,4 +20,48 @@
   background-color: #cccccc;
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
+
+.up-button {
+  text-decoration: none;
+  position: absolute;
+  bottom: 670px;
+  right: 27px;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  width: 71px;
+  height: 39px;
+  background-color: #984abc;
+  text-align: center;
+  padding:43px  6px 5px;
+  border-radius: 50% 50%;
+  &:after {
+    content: '';
+    display: block;
+    border: 15px solid transparent;
+    border-bottom: 18px solid #ffffff;
+    position: absolute;
+    left: 28px;
+    top: 8px;
+  }
+}
+@font-face {
+  font-family: "vida_21_proitalic";
+  src: url(../../font/vida21pro-italic.svg);
+}
+@font-face {
+  font-family: "Vida 21 Pro Regular";
+  src: url(../../font/vida21pro.svg);
+}
+@font-face {
+  font-family: "Vida 22 Pro Bold";
+  src: url(../../font/vida22pro-bold.svg);
+}
+@font-face {
+  font-family: "Vida 22 Pro Bold Italic";
+  src: url(../../font/vida22pro-bolditalic.svg);
+}
+

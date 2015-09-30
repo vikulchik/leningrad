@@ -14,8 +14,8 @@
     &-logo {
         display: inline-block;
         position: absolute;
-        top: 4%;
-        left: 32%;
+        top: 15px;
+        left: 354px;
     }
     &-player {
         position: relative;
@@ -70,19 +70,21 @@
         box-sizing: border-box;
         margin-left: 18px;
         text-transform: capitalize;
+        font-family: "Vida 21 Pro Regular";
     }
     &-language {
         color: #eb98b9;
         font-size: 15px;
         text-decoration: none;
         position: absolute;
-        top: 29px;
-        left: 288px;
+        top: 27px;
+        left: 216px;
     }
     &-contact {
        position: absolute;
         top: 98px;
-        right: 193px;
+        right: 116px;
+        font-family: "Vida 21 Pro Regular";
     }
     &-title {
         margin-right: 140px;
@@ -97,6 +99,7 @@
         height: 18px;
         float: right;
         text-align: center;
+        font-family: "Vida 21 Pro Regular";
         .triangle-right {
             border: 17px solid transparent;
             border-left: 20px solid #984abc;
@@ -112,7 +115,8 @@
         display: inline-block;
         position: absolute;
         top: 62px;
-        right: 241px;
+        right: 169px;
+        font-family: "Vida 21 Pro Regular";
     }
     &-phone {
         font-size: 20px;
